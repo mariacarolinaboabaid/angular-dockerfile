@@ -1,0 +1,67 @@
+#container-buttons-search {
+    display: flex;
+}
+
+.card{
+    margin-bottom: 60px;
+    width: 18rem;
+    box-shadow: 1px 1px 6px #606d80;
+}
+
+.card-header {
+    background-color: #dce0e6;
+    font-weight: bold;
+    font-size: 13.5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.list-group-item {
+    font-size: 12px;
+}
+
+.col {
+    display: flex;
+    justify-content: space-between;
+}
+
+#colButtonRegister{
+    justify-content: center;
+}
+
+button, input {
+    font-size: 14px;
+    box-shadow: 1px 1px 2px #606d80;
+}
+
+span {
+    font-size: 10px;
+    color: blue;
+    cursor: pointer;
+}
+
+@media (max-width: 537px){
+    .col-sm-6 {
+        flex: 0 0 auto;
+        width: 80%;
+    }
+    .col {
+        display: flex;
+        justify-content: center;
+    }
+}
+@media (max-width: 767px){
+    .card{
+        width: 14rem; 
+    }
+    button, .card-header, input{
+        font-size: 13px;
+    }
+    #registerUser{
+        margin-top: 10px;
+        text-align: center;
+    }
+    #colButtonRegister{
+        justify-content: center;
+    }
+}

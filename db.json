@@ -1,0 +1,197 @@
+{
+  "pedagogos": [
+    {
+      "name": "Maria Carolina Knudsen Boabaid",
+      "phone": "48999997777",
+      "dateBirth": "14/10/1997",
+      "cpf": "99999999988",
+      "email": "mariacarolina@gmail.com",
+      "password": "12345678",
+      "id": 1
+    },
+    {
+      "name": "Alexandre Henrique Fernandes Nolla",
+      "phone": "48999995555",
+      "dateBirth": "14/10/1994",
+      "cpf": "99999999900",
+      "email": "alexandrehenrique@gmail.com",
+      "password": "abcd1234",
+      "id": 2
+    },
+    {
+      "name": "Fernanda Silva",
+      "phone": "48999555555",
+      "dateBirth": "14/01/1990",
+      "cpf": "88888888888",
+      "email": "fesilva@gmail.com",
+      "password": "eraumavez",
+      "id": 3
+    },
+    {
+      "name": "João Rosa",
+      "phone": "47999992323",
+      "dateBirth": "01/01/1990",
+      "cpf": "45555466789",
+      "email": "joaorosa@gmail.com",
+      "password": "joao1234",
+      "id": 4
+    },
+    {
+      "name": "Mariana Pereira",
+      "phone": "48999995555",
+      "dateBirth": "19/10/1974",
+      "cpf": "12345678900",
+      "email": "marianapereira@hotmail.com",
+      "password": "olatudobem",
+      "id": 5
+    },
+    {
+      "name": "Lolla Weel",
+      "phone": "48999999999",
+      "dateBirth": "20/01/1984",
+      "cpf": "00044455577",
+      "email": "lollaweel@gmail.com",
+      "password": "programacao",
+      "id": 6
+    },
+    {
+      "name": "Paulo Fankert",
+      "phone": "47988665544",
+      "dateBirth": "25/06/1965",
+      "cpf": "00011122233",
+      "email": "paulofankert@gmail.com",
+      "password": "44448888",
+      "id": 7
+    }
+  ],
+  "alunos": [
+    {
+      "name": "Ana Luisa Lopes",
+      "phone": "47988884444",
+      "dateBirth": "01/10/2000",
+      "cpf": "33344455500",
+      "grade": 8,
+      "id": 1
+    },
+    {
+      "name": "Felipe Medeiros",
+      "phone": "47999334422",
+      "dateBirth": "30/09/2000",
+      "cpf": "11177766644",
+      "grade": 7,
+      "id": 2
+    },
+    {
+      "name": "Gabriel Lopes",
+      "phone": "48999556666",
+      "dateBirth": "28/11/2002",
+      "cpf": "66677788899",
+      "grade": 9,
+      "id": 3
+    },
+    {
+      "name": "Manuela Hosser",
+      "phone": "48999667788",
+      "dateBirth": "15/04/2002",
+      "cpf": "00099988877",
+      "grade": 10,
+      "id": 4
+    },
+    {
+      "name": "Daniela Yousef",
+      "phone": "47988556643",
+      "dateBirth": "25/07/2001",
+      "cpf": "99978756555",
+      "grade": 7,
+      "id": 5
+    },
+    {
+      "name": "Karina Rodrigues",
+      "phone": "48999337729",
+      "dateBirth": "21/06/2001",
+      "cpf": "11111111111",
+      "grade": 6,
+      "id": 6
+    },
+    {
+      "name": "Izabel Knudsen",
+      "phone": "48999623939",
+      "dateBirth": "24/02/2000",
+      "cpf": "88888877777",
+      "grade": 10,
+      "id": 7
+    },
+    {
+      "name": "Maria Eduarda Pallermo",
+      "phone": "48999933222",
+      "dateBirth": "25/07/2001",
+      "cpf": "77788877788",
+      "grade": 4,
+      "id": 8
+    },
+    {
+      "name": "Yuri Kemmer",
+      "phone": "48999990000",
+      "dateBirth": "31/12/2000",
+      "cpf": "12312312300",
+      "grade": 6,
+      "id": 9
+    }
+  ],
+  "acompanhamentos": [
+    {
+      "student": "Ana Luisa Lopes",
+      "teacher": "Maria Carolina Knudsen Boabaid",
+      "title": "Physics",
+      "date": "25/07/2023",
+      "description": "Physics tutoring",
+      "finished": "",
+      "id": 1
+    },
+    {
+      "student": "Gabriel Lopes",
+      "teacher": "Alexandre Henrique Fernandes Nolla",
+      "title": "Math",
+      "date": "25/07/2023",
+      "description": "School recovery",
+      "finished": true,
+      "id": 2
+    },
+    {
+      "student": "Izabel Knudsen",
+      "teacher": "Lolla Weel",
+      "title": "Geography",
+      "date": "25/07/2023",
+      "description": "Geography tutoring",
+      "finished": "",
+      "id": 3
+    },
+    {
+      "student": "Felipe Medeiros",
+      "teacher": "Fernanda Silva",
+      "title": "Literature",
+      "date": "22/07/2023",
+      "description": "Literature tutoring",
+      "finished": true,
+      "id": 4
+    },
+    {
+      "student": "Maria Eduarda Pallermo",
+      "teacher": "Mariana Pereira",
+      "title": "Math",
+      "date": "25/07/2023",
+      "description": "School recovery",
+      "finished": "",
+      "id": 5
+    },
+    {
+      "student": "Yuri Kemmer",
+      "teacher": "Maria Carolina Knudsen Boabaid",
+      "title": "Math",
+      "date": "04/07/2023",
+      "description": "School recovery",
+      "finished": true,
+      "id": 6
+    }
+  ]
+}

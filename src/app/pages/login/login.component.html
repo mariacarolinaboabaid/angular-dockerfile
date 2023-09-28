@@ -1,0 +1,53 @@
+<div class="container">
+
+    <h1 class="mb-3">LOGIN</h1>
+
+    <form (ngSubmit)="login()" #loginForm="ngForm">
+
+        <div class="mb-3">
+            <!-- EMAIL -->
+            <label class="form-label" for="userEmail">E-mail</label>
+
+            <input type="email" 
+            id="userEmail" 
+            name="userEmail" 
+            [(ngModel)]="userEmailInput"
+            class="form-control"
+            required
+            email>
+        </div>
+        <span [hidden]="hideMessageErrorEmail" class="errorAlert">E-mail not registered</span>
+
+        <!-- PASSWORD -->
+        <div class="mb-3">
+            <label class="form-label" for="userPassword">Password</label>
+
+            <input 
+            type="password" 
+            id="userPassword"
+            name="userPassword"
+            [(ngModel)]="userPasswordInput"
+            class="form-control" 
+            required
+            minlength="8">
+        </div>
+        <span [hidden]="hideMessageErrorPassword" class="errorAlert">Incorrect password</span>
+
+        <!-- BUTTONS -->
+        <div class="d-grid gap-2 col-12 mx-auto">
+            <button
+            type="submit"
+            class="btn btn-primary"
+            style=" background-color: #bfcff7; color: black;"
+            [disabled]="loginForm.form.invalid"
+            >Login</button>
+        </div>
+
+        <div class="d-grid gap-2 col-12 mx-auto">
+            <button
+            (click)="redirectRegisterUser()"
+            class="btn btn-secondary"
+            >Register User</button>
+        </div>
+    </form>
+</div>

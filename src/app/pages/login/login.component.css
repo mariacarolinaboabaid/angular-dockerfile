@@ -1,0 +1,14 @@
+.errorAlert {
+    display: block;
+    margin-bottom: 10px;
+    color: red;
+    font-size: 12px;
+}
+
+button {
+    margin-top: 20px;
+}
+
+.container {
+    margin-top: 100px;
+}

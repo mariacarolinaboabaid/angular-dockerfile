@@ -1,0 +1,78 @@
+<form [formGroup]="registerForm" (ngSubmit)="emitPostData()" #form="ngForm">
+
+    <!-- STUDENT NAME  -->
+    <div class="form-floating mb-3">
+        <select class="form-select" formControlName="studentName" name="nameStudent" id="nameStudent">
+            <option selected>Select</option>
+            <option *ngFor="let student of arrayStudents" [value]="student.name">
+                {{student.name}}
+            </option>
+        </select>
+        <label for="nameStudent">Student</label>
+        <span *ngIf="validateSelectErrorMessage('studentName')">
+            Please, select a student!
+        </span>
+    </div>
+
+    <!-- TEACHER NAME  -->
+    <div class="form-floating mb-3">
+        <select class="form-select" formControlName="teacherName" name="nameTeacher" id="nameTeacher">
+            <option selected>Select</option>
+            <option *ngFor="let teacher of arrayTeachers" [value]="teacher.name">
+                {{teacher.name}}
+            </option>
+        </select>
+        <label for="nameTeacher">Teacher</label>
+        <span *ngIf="validateSelectErrorMessage('teacherName')">
+            Please, select a teacher!
+        </span>
+    </div>
+
+    <div class="row g-2">
+        <!-- TITLE -->
+        <div class="col-md">
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" formControlName="title" name="title" id="title">
+                <label for="title">Title</label>
+                <span *ngIf="validateErrorMessage('title')">
+                    The field title is required!
+                </span>
+            </div>
+        </div>
+        <!-- DATE -->
+        <div class="col-md">
+            <div class="form-floating mb-3">
+                <input type="date" class="form-control" formControlName="date" name="date" id="date">
+                <label for="date">Date</label>
+                <span *ngIf="validateErrorMessage('date')">
+                    The field date is required!
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <!-- DESCRIPTION -->
+    <div class="form-floating mb-3">
+        <textarea class="form-control" formControlName="description" name="description" id="description">
+        </textarea>
+        <label for="description">Description</label>
+        <span *ngIf="validateErrorMessage('description')">
+            The field description is required!
+        </span>
+    </div>
+
+    <!-- FINISH -->
+    <div class="form-check mb-3">
+        <input class="form-check-input" type="checkbox" value="finished" formControlName="finished" name="finished"
+            id="finished">
+        <label class="form-check-label" for="finished">
+            Finished
+        </label>
+    </div>
+
+    <!-- SUBMIT -->
+    <div class="d-grid gap-2 col-12 mx-auto">
+        <button type="submit" class="btn btn-success" [disabled]="this.form.form.invalid">{{buttonName}}</button>
+    </div>
+
+</form>

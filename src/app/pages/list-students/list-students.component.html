@@ -1,0 +1,40 @@
+<div class="container">
+
+    <!-- SEARCH AND REGISTER BUTTON -->
+    <div class="row mb-5">
+        <div class="col-md-8">
+            <form class="d-flex" role="search">
+                <input 
+                class="form-control me-2" 
+                name="search" type="search"
+                placeholder="Search by the name of the student" 
+                aria-label="Search"
+                [(ngModel)]="userSearch">
+                <button class="btn btn-primary" (click)="search()">Search</button>
+            </form>
+        </div>
+        <div id="colButtonRegister" class="col col-md-4">
+            <button id="registerUser" class="btn btn-success" (click)="redirectToRegister()">Register a new student</button>
+        </div>
+    </div>
+
+    <!-- CARDS -->
+    <div id="rowCards" class="row">
+        <div *ngFor="let student of arrayStudents" class="col col-xl-4 col-xxl-3">
+
+            <div class="card">
+                <div class="card-header">
+                    {{student.name}}
+                </div>
+
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Grade: {{student.grade}}</li>
+
+                    <li class="list-group-item">CPF: {{student.cpf}}</li>
+
+                    <li class="list-group-item">Date of birth: {{student.dateBirth}}</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

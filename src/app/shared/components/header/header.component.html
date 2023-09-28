@@ -1,0 +1,33 @@
+<nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+        <!-- LOGO AND TITLE -->
+        <div id="container-logo-title">
+            <img src="../../../../assets/brain.png" alt="Bootstrap" width="25" height="22">
+            <span class="navbar-brand">LabSCHOOL</span>
+        </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+            aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- LINKS -->
+        <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="nav nav-underline me-auto mb-2 mb-lg-0"> 
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/home" routerLinkActive="active">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/list-students" routerLinkActive="active">Students</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/list-monitorings" routerLinkActive="active">Pedagogical Monitoring</a>
+                </li>
+            </ul>
+
+            <!-- BUTTON LOGOUT -->
+            <button type="button" class="btn btn-light" (click)="logout()">
+                Logout
+            </button>
+        </div>
+    </div>
+</nav>

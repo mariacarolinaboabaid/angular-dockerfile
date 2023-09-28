@@ -1,0 +1,95 @@
+<div class="container">
+
+    <h1 class="mb-3">REGISTER USER</h1>
+
+    <form [formGroup]="registerForm" (ngSubmit)="register()">
+        <!-- NAME -->
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control" name="name" id="name" formControlName="userName">
+            <label for="name">Name</label>
+            <span *ngIf="validateErrorMessage('userName')">
+                The field name is required!
+            </span>
+        </div>
+        <div class="row g-2">
+            <!-- TELEPHONE -->
+            <div class="col-md">
+                <div class="form-floating mb-3">
+                    <input type="tel" name="telephone" id="telephone" class="form-control"
+                        formControlName="userTelephone" mask="(00) 00000-0000">
+                    <label for="telephone">Phone</label>
+                    <span *ngIf="validateErrorMessage('userTelephone')">
+                        The field telephone is required!
+                    </span>
+                </div>
+            </div>
+            <!-- DATE OF BIRTH -->
+            <div class="col-md">
+                <div class="form-floating mb-3">
+                    <input type="date" name="birth" id="birth" class="form-control" formControlName="userBirth">
+                    <label for="birth">Date of birth</label>
+                    <span *ngIf="validateErrorMessage('userBirth')">
+                        The field date of birth is required!
+                    </span>
+                    <span *ngIf="validateBirthErrorMessage()">
+                        The field date of birth must be before the current date!
+                    </span>
+                </div>
+            </div>
+        </div>
+        <!-- CPF -->
+        <div class="form-floating mb-3">
+            <input type="text" name="cpf" id="cpf" class="form-control" formControlName="userCPF" mask="000.000.000-00">
+            <label for="cpf">CPF</label>
+            <span *ngIf="validateErrorMessage('userCPF')">
+                The field CPF is required!
+            </span>
+        </div>
+        <!-- E-MAIL -->
+        <div class="form-floating mb-3">
+            <input type="email" name="email" id="email" class="form-control" formControlName="userEmail">
+            <label for="email">E-mail</label>
+            <span *ngIf="validateErrorMessage('userEmail')">
+                The field e-mail is required!
+            </span>
+        </div>
+        <div class="row g-2">
+            <!-- PASSWORD -->
+            <div class="col-md">
+                <div class="form-floating mb-3">
+                    <input type="password" name="password" id="password" class="form-control"
+                        formControlName="userPassword">
+                    <label for="password">Password</label>
+                    <span *ngIf="validateErrorMessage('userPassword')">
+                        The field password is required!
+                    </span>
+                    <span *ngIf="validatePasswordLengthErrorMessage('userPassword')">
+                        The password must have at least 8 characters!
+                    </span>
+                </div>
+            </div>
+            <!-- CONFIRM PASSWORD -->
+            <div class="col-md">
+                <div class="form-floating mb-3">
+                    <input type="password" name="confirmPassword" id="confirmPassword" class="form-control"
+                        formControlName="userConfirmPassword">
+                    <label for="confirmPassword">Confirm password</label>
+                    <span *ngIf="validateErrorMessage('userConfirmPassword')">
+                        The field confirm password is required!
+                    </span>
+                    <span *ngIf="validatePasswordLengthErrorMessage('userConfirmPassword')">
+                        The confirm password must have at least 8 characters!
+                    </span>
+                    <span *ngIf="validateConfirmPasswordErrorMessage()">
+                        The confirm password does not match with the password!
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <!-- BUTTON SUBMIT -->
+        <div class="d-grid gap-2 col-12 mx-auto">
+            <button type="submit" class="btn btn-primary" style=" background-color: #bfcff7; color: black;" [disabled]="this.registerForm.invalid">Register</button>
+        </div>
+    </form>
+</div>

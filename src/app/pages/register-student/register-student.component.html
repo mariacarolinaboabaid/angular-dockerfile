@@ -1,0 +1,64 @@
+<div class="container">
+
+    <h1 class="mb-3">REGISTER STUDENT</h1>
+    
+    <form [formGroup]="registerForm" (ngSubmit)="register()">
+        <!-- NAME -->
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control" name="name" id="name" formControlName="studentName">
+            <label for="name">Name</label>
+            <span *ngIf="validateErrorMessage('studentName')">
+                The field name is required!
+            </span>
+        </div>
+        <div class="row g-2">
+            <!-- TELEPHONE -->
+            <div class="col-md">
+                <div class="form-floating mb-3">
+                    <input type="tel" name="telephone" id="telephone" class="form-control"
+                        formControlName="studentTelephone" mask="(00) 00000-0000">
+                    <label for="telephone">Phone</label>
+                    <span *ngIf="validateErrorMessage('studentTelephone')">
+                        The field telephone is required!
+                    </span>
+                </div>
+            </div>
+            <!-- DATE OF BIRTH -->
+            <div class="col-md">
+                <div class="form-floating mb-3">
+                    <input type="date" name="birth" id="birth" class="form-control" formControlName="studentBirth">
+                    <label for="birth">Date of birth</label>
+                    <span *ngIf="validateErrorMessage('studentBirth')">
+                        The field date of birth is required!
+                    </span>
+                    <span *ngIf="validateBirthErrorMessage()">
+                        The field date of birth must be before the current date!
+                    </span>
+                </div>
+            </div>
+        </div>
+        <!-- CPF -->
+        <div class="form-floating mb-3">
+            <input type="text" name="cpf" id="cpf" class="form-control" formControlName="studentCPF"
+                mask="000.000.000-00">
+            <label for="cpf">CPF</label>
+            <span *ngIf="validateErrorMessage('studentCPF')">
+                The field CPF is required!
+            </span>
+        </div>
+        <!-- GRADE -->
+        <div class="form-floating mb-3">
+            <input type="number" name="grade" id="grade" class="form-control" formControlName="studentGrade" min="0"
+                max="10">
+            <label for="grade">Grade</label>
+            <span *ngIf="validateErrorMessage('studentGrade')">
+                The field grade is required!
+            </span>
+        </div>
+
+        <!-- SUBMIT -->
+        <div class="d-grid gap-2 col-12 mx-auto">
+            <button type="submit" class="btn btn-success" [disabled]="this.registerForm.invalid">Register</button>
+        </div>
+    </form>
+</div>

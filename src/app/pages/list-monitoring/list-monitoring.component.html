@@ -1,0 +1,41 @@
+<div class="container">
+
+    <!-- SEARCH AND REGISTER BUTTON -->
+    <div class="row mb-5">
+        <div class="col-md-8">
+            <form class="d-flex" role="search">
+                <input 
+                class="form-control me-2" 
+                name="search" type="search"
+                placeholder="Search by the title of the pedagogical monitoring" 
+                aria-label="Search"
+                [(ngModel)]="userSearch">
+                <button class="btn btn-primary" (click)="search()">Search</button>
+            </form>
+        </div>
+        <div id="colButtonRegister" class="col col-md-4">
+            <button id="registerUser" class="btn btn-success" (click)="redirectToRegister()">Register a new Pedagogical Monitoring</button>
+        </div>
+    </div>
+
+    <!-- CARDS -->
+    <div id="rowCards" class="row">
+        <div *ngFor="let monitoring of arrayMonitoring" class="col col-xl-4 col-xxl-3">
+
+            <div class="card" (click)="redirectToEdit(monitoring.id)">
+                <div class="card-header">
+                    {{monitoring.title}}
+                    <span>Click here to edit</span>
+                </div>
+
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Student: {{monitoring.student}}</li>
+
+                    <li class="list-group-item">Teacher: {{monitoring.teacher}}</li>
+
+                    <li class="list-group-item">Date: {{monitoring.date}}</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
